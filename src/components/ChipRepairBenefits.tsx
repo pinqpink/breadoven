@@ -2,13 +2,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { 
   DollarSign, 
-  Shield, 
   Clock, 
   MapPin, 
   Car,
   Wrench,
   CheckCircle,
-  TrendingDown,
   Phone
 } from 'lucide-react';
 
@@ -18,49 +16,49 @@ const ChipRepairBenefits = () => {
       icon: DollarSign,
       title: "Save Hundreds of Dollars",
       description: "Rock chip repair costs a fraction of windshield replacement. Avoid the $300-800+ cost of a new windshield.",
-      highlight: "90% Cost Savings"
-    },
-    {
-      icon: Shield,
-      title: "No Insurance Deductible",
-      description: "Most insurance companies cover chip repairs with $0 deductible, unlike replacements which often require $500+ deductibles.",
-      highlight: "Zero Out-of-Pocket"
-    },
-    {
-      icon: TrendingDown,
-      title: "Prevent Premium Increases",
-      description: "Avoid filing expensive replacement claims that could impact your insurance rates. Keep your record clean with simple repairs.",
-      highlight: "Protect Your Rates"
+      highlight: "90% Cost Savings",
+      iconBg: "bg-green-100",
+      iconColor: "text-green-600"
     },
     {
       icon: MapPin,
       title: "Complete Mobile Convenience",
       description: "We come to your home, office, or anywhere in Omaha. No need to visit a shop or disrupt your day.",
-      highlight: "We Come to You"
+      highlight: "We Come to You",
+      iconBg: "bg-blue-100",
+      iconColor: "text-blue-600"
     },
     {
       icon: Clock,
       title: "No Vehicle Downtime",
       description: "Repairs take just 15-30 minutes while you keep your car. No waiting at shops or rental car hassles.",
-      highlight: "Quick & Easy"
+      highlight: "Quick & Easy",
+      iconBg: "bg-purple-100",
+      iconColor: "text-purple-600"
     },
     {
       icon: Car,
       title: "No ADAS Recalibration",
       description: "Unlike replacements, repairs don't require expensive advanced driver assistance system recalibration ($150-500+).",
-      highlight: "Additional Savings"
+      highlight: "Additional Savings",
+      iconBg: "bg-orange-100",
+      iconColor: "text-orange-600"
     },
     {
       icon: Wrench,
       title: "Preserve Original Factory Seal",
       description: "Keep your manufacturer's windshield seal intact. No risk of leaks, wind noise, or rattles from installation issues.",
-      highlight: "Factory Quality"
+      highlight: "Factory Quality",
+      iconBg: "bg-red-100",
+      iconColor: "text-red-600"
     },
     {
       icon: CheckCircle,
       title: "Easier Scheduling",
       description: "Same-day service available. No waiting weeks for shop appointments or dealing with complicated scheduling.",
-      highlight: "Flexible Timing"
+      highlight: "Flexible Timing",
+      iconBg: "bg-teal-100",
+      iconColor: "text-teal-600"
     }
   ];
 
@@ -82,20 +80,22 @@ const ChipRepairBenefits = () => {
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {benefits.map((benefit, index) => (
             <Card key={index} className="relative border hover:border-primary/50 transition-all duration-300 hover:shadow-xl group shadow-md">
               <div className="absolute -top-3 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
                 {benefit.highlight}
               </div>
               <CardHeader className="text-center pb-4 pt-8">
-                <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors shadow-sm">
-                  <benefit.icon className="h-7 w-7 text-primary" />
+                <div className={`w-16 h-16 mx-auto mb-4 ${benefit.iconBg} rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm relative overflow-hidden`}>
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
+                  <benefit.icon className={`h-8 w-8 ${benefit.iconColor} relative z-10`} />
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-white/30 rounded-full"></div>
                 </div>
-                <CardTitle className="text-lg font-semibold">{benefit.title}</CardTitle>
+                <CardTitle className="text-lg font-bold text-foreground">{benefit.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-center text-sm">
+                <CardDescription className="text-center text-sm leading-relaxed">
                   {benefit.description}
                 </CardDescription>
               </CardContent>

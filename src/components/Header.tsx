@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -56,10 +57,30 @@ const Header = () => {
                 <span>Our Services</span>
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background border border-border">
+              <DropdownMenuContent className="bg-background border border-border shadow-lg rounded-lg p-2 min-w-[280px]">
                 <DropdownMenuItem asChild>
-                  <Link to="/services" className="cursor-pointer">
-                    Windshield Chip Repair
+                  <Link to="/services" className="cursor-pointer flex items-center justify-between p-3 rounded-md hover:bg-primary/5 transition-colors">
+                    <div>
+                      <div className="font-semibold text-foreground">Windshield Chip Repair</div>
+                      <div className="text-sm text-muted-foreground">Mobile rock chip repair service</div>
+                    </div>
+                    <Badge className="bg-primary/10 text-primary text-xs">Most Popular</Badge>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/dealership-services" className="cursor-pointer flex items-center justify-between p-3 rounded-md hover:bg-accent transition-colors">
+                    <div>
+                      <div className="font-medium text-foreground">On-Lot Chip Repair for Dealers</div>
+                      <div className="text-sm text-muted-foreground">Scheduled lot maintenance service</div>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/fleet-services" className="cursor-pointer flex items-center justify-between p-3 rounded-md hover:bg-accent transition-colors">
+                    <div>
+                      <div className="font-medium text-foreground">Fleet Windshield Chip Repair</div>
+                      <div className="text-sm text-muted-foreground">Commercial fleet maintenance</div>
+                    </div>
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
