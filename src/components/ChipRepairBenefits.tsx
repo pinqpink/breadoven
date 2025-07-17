@@ -17,48 +17,48 @@ const ChipRepairBenefits = () => {
       title: "Save Hundreds of Dollars",
       description: "Rock chip repair costs a fraction of windshield replacement. Avoid the $300-800+ cost of a new windshield.",
       highlight: "90% Cost Savings",
-      iconBg: "bg-primary/10",
-      iconColor: "text-primary"
+      iconBg: "bg-green-100",
+      iconColor: "text-green-600"
     },
     {
       icon: MapPin,
       title: "Complete Mobile Convenience",
       description: "We come to your home, office, or anywhere in Omaha. No need to visit a shop or disrupt your day.",
       highlight: "We Come to You",
-      iconBg: "bg-primary/10",
-      iconColor: "text-primary"
+      iconBg: "bg-blue-100",
+      iconColor: "text-blue-600"
     },
     {
       icon: Clock,
       title: "No Vehicle Downtime",
       description: "Repairs take just 15-30 minutes while you keep your car. No waiting at shops or rental car hassles.",
       highlight: "Quick & Easy",
-      iconBg: "bg-primary/10",
-      iconColor: "text-primary"
+      iconBg: "bg-orange-100",
+      iconColor: "text-orange-600"
     },
     {
       icon: Car,
       title: "No ADAS Recalibration",
       description: "Unlike replacements, repairs don't require expensive advanced driver assistance system recalibration ($150-500+).",
       highlight: "Additional Savings",
-      iconBg: "bg-primary/10",
-      iconColor: "text-primary"
+      iconBg: "bg-purple-100",
+      iconColor: "text-purple-600"
     },
     {
       icon: Wrench,
       title: "Preserve Original Factory Seal",
       description: "Keep your manufacturer's windshield seal intact. No risk of leaks, wind noise, or rattles from installation issues.",
       highlight: "Factory Quality",
-      iconBg: "bg-primary/10",
-      iconColor: "text-primary"
+      iconBg: "bg-red-100",
+      iconColor: "text-red-600"
     },
     {
       icon: CheckCircle,
       title: "Easier Scheduling",
       description: "Same-day service available. No waiting weeks for shop appointments or dealing with complicated scheduling.",
       highlight: "Flexible Timing",
-      iconBg: "bg-primary/10",
-      iconColor: "text-primary"
+      iconBg: "bg-teal-100",
+      iconColor: "text-teal-600"
     }
   ];
 
@@ -82,7 +82,7 @@ const ChipRepairBenefits = () => {
         {/* Benefits Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {benefits.map((benefit, index) => (
-            <Card key={index} className="relative border hover:border-primary/50 transition-all duration-300 hover:shadow-xl group shadow-md">
+            <Card key={index} className="relative border hover:border-primary/50 transition-all duration-300 hover:shadow-xl group shadow-md cursor-pointer">
               <div className="absolute -top-3 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
                 {benefit.highlight}
               </div>
@@ -92,7 +92,7 @@ const ChipRepairBenefits = () => {
                   <benefit.icon className={`h-8 w-8 ${benefit.iconColor} relative z-10`} />
                   <div className="absolute -top-1 -right-1 w-3 h-3 bg-white/30 rounded-full"></div>
                 </div>
-                <CardTitle className="text-lg font-bold text-foreground">{benefit.title}</CardTitle>
+                <CardTitle className="text-lg font-bold text-foreground group-hover:scale-105 transition-transform duration-300">{benefit.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center text-sm leading-relaxed">

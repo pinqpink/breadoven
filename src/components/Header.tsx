@@ -49,6 +49,7 @@ const Header = () => {
               className="relative"
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
+              onClick={() => setIsServicesOpen(!isServicesOpen)}
             >
               <button className={`flex items-center space-x-1 text-foreground hover:text-primary transition-colors duration-200 font-medium border-b-2 border-transparent hover:border-primary pb-1 ${
                 location.pathname === '/services' || location.pathname === '/dealership-services' || location.pathname === '/fleet-services' ? 'text-primary' : ''
@@ -57,27 +58,30 @@ const Header = () => {
                 <ChevronDown className="h-4 w-4" />
               </button>
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 bg-background border border-border shadow-lg rounded-lg p-2 min-w-[220px] z-50">
+                <div className="absolute top-full left-0 mt-2 bg-background border border-border shadow-lg rounded-lg p-3 min-w-[280px] z-50 pb-6">
                   <Link 
                     to="/services" 
-                    className="block p-3 rounded-md hover:bg-primary/5 transition-colors relative"
+                    className="block p-4 rounded-md hover:bg-primary/5 transition-colors relative"
+                    onClick={() => setIsServicesOpen(false)}
                   >
                     <div className="flex items-center justify-between">
-                      <span className="font-semibold text-foreground">Windshield Chip Repair</span>
+                      <span className="font-semibold text-gray-800 text-sm">Rock Chip Repair Service</span>
                       <Badge className="bg-primary/10 text-primary text-xs ml-2">Most Popular</Badge>
                     </div>
                   </Link>
                   <Link 
                     to="/dealership-services" 
-                    className="block p-3 rounded-md hover:bg-accent transition-colors"
+                    className="block p-4 rounded-md hover:bg-accent transition-colors"
+                    onClick={() => setIsServicesOpen(false)}
                   >
-                    <span className="font-medium text-foreground">On-Lot Chip Repair for Dealers</span>
+                    <span className="font-medium text-gray-800 text-sm">Dealership Lot Services</span>
                   </Link>
                   <Link 
                     to="/fleet-services" 
-                    className="block p-3 rounded-md hover:bg-accent transition-colors"
+                    className="block p-4 rounded-md hover:bg-accent transition-colors"
+                    onClick={() => setIsServicesOpen(false)}
                   >
-                    <span className="font-medium text-foreground">Fleet Windshield Chip Repair</span>
+                    <span className="font-medium text-gray-800 text-sm">Commercial Fleet Services</span>
                   </Link>
                 </div>
               )}

@@ -16,6 +16,10 @@ import {
 } from 'lucide-react';
 
 const Services = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const repairProcess = [
     {
       step: 1,
@@ -82,9 +86,18 @@ const Services = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-hero-gradient py-20">
+      <section className="relative bg-hero-gradient py-20 overflow-hidden">
+        {/* Background Image with Blur Effect */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/lovable-uploads/ChatGPT Image Jul 17, 2025, 04_03_56 PM.png" 
+            alt="Background" 
+            className="w-full h-full object-cover opacity-20 blur-sm"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 to-slate-800/70 backdrop-blur-sm"></div>
+        </div>
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center relative z-10">
             <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
               Windshield Chip Repair Services
             </h1>
