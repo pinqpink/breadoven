@@ -42,12 +42,13 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 text-lg font-semibold rounded-full transition-all duration-200"
+                className="border-2 border-white text-white hover:bg-primary hover:text-white hover:border-primary px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 relative overflow-hidden group"
                 asChild
               >
                 <a href="tel:402-555-0123" className="flex items-center space-x-2">
-                  <Phone className="h-5 w-5" />
-                  <span>Call Us Today!</span>
+                  <div className="absolute inset-0 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></div>
+                  <Phone className="h-5 w-5 relative z-10" />
+                  <span className="relative z-10">Call Us Today!</span>
                 </a>
               </Button>
             </div>
@@ -68,9 +69,11 @@ const Hero = () => {
             <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl">
               <div className="text-center">
                 <div className="w-32 h-32 mx-auto mb-6 bg-primary/20 rounded-full flex items-center justify-center border-2 border-primary/30">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                    <span className="text-primary text-2xl font-bold">OAG</span>
-                  </div>
+                  <img 
+                    src="/lovable-uploads/9ccc5ea8-9e5f-4dd2-a295-579bca72f167.png" 
+                    alt="Omaha Auto Glass Repair" 
+                    className="h-16 w-auto"
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">
                   Mobile Rock Chip Repair

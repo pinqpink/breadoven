@@ -3,15 +3,10 @@ import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
 
   return (
@@ -50,41 +45,43 @@ const Header = () => {
             >
               About Us
             </Link>
-            <DropdownMenu>
-              <DropdownMenuTrigger className={`flex items-center space-x-1 text-foreground hover:text-primary transition-colors duration-200 font-medium border-b-2 border-transparent hover:border-primary pb-1 ${
-                location.pathname === '/services' ? 'text-primary' : ''
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
+            >
+              <button className={`flex items-center space-x-1 text-foreground hover:text-primary transition-colors duration-200 font-medium border-b-2 border-transparent hover:border-primary pb-1 ${
+                location.pathname === '/services' || location.pathname === '/dealership-services' || location.pathname === '/fleet-services' ? 'text-primary' : ''
               }`}>
                 <span>Our Services</span>
                 <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background border border-border shadow-lg rounded-lg p-2 min-w-[280px]">
-                <DropdownMenuItem asChild>
-                  <Link to="/services" className="cursor-pointer flex items-center justify-between p-3 rounded-md hover:bg-primary/5 transition-colors">
-                    <div>
-                      <div className="font-semibold text-foreground">Windshield Chip Repair</div>
-                      <div className="text-sm text-muted-foreground">Mobile rock chip repair service</div>
-                    </div>
-                    <Badge className="bg-primary/10 text-primary text-xs">Most Popular</Badge>
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/dealership-services" className="cursor-pointer flex items-center justify-between p-3 rounded-md hover:bg-accent transition-colors">
-                    <div>
-                      <div className="font-medium text-foreground">On-Lot Chip Repair for Dealers</div>
-                      <div className="text-sm text-muted-foreground">Scheduled lot maintenance service</div>
+              </button>
+              {isServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 bg-background border border-border shadow-lg rounded-lg p-2 min-w-[220px] z-50">
+                  <Link 
+                    to="/services" 
+                    className="block p-3 rounded-md hover:bg-primary/5 transition-colors relative"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="font-semibold text-foreground">Windshield Chip Repair</span>
+                      <Badge className="bg-primary/10 text-primary text-xs ml-2">Most Popular</Badge>
                     </div>
                   </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/fleet-services" className="cursor-pointer flex items-center justify-between p-3 rounded-md hover:bg-accent transition-colors">
-                    <div>
-                      <div className="font-medium text-foreground">Fleet Windshield Chip Repair</div>
-                      <div className="text-sm text-muted-foreground">Commercial fleet maintenance</div>
-                    </div>
+                  <Link 
+                    to="/dealership-services" 
+                    className="block p-3 rounded-md hover:bg-accent transition-colors"
+                  >
+                    <span className="font-medium text-foreground">On-Lot Chip Repair for Dealers</span>
                   </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+                  <Link 
+                    to="/fleet-services" 
+                    className="block p-3 rounded-md hover:bg-accent transition-colors"
+                  >
+                    <span className="font-medium text-foreground">Fleet Windshield Chip Repair</span>
+                  </Link>
+                </div>
+              )}
+            </div>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors duration-200 font-medium border-b-2 border-transparent hover:border-primary pb-1">
               Contact
             </a>

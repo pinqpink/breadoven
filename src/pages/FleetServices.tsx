@@ -14,7 +14,11 @@ import {
   Truck,
   Calendar,
   FileText,
-  Users
+  Users,
+  Package,
+  Building,
+  Wrench,
+  Bus
 } from 'lucide-react';
 
 const FleetServices = () => {
@@ -23,14 +27,14 @@ const FleetServices = () => {
   }, []);
 
   const fleetTypes = [
-    "Amazon DSPs & Flex Drivers",
-    "FedEx / UPS / DHL Independent Operators", 
-    "U-Haul Locations & Franchisees",
-    "Penske, Ryder & Enterprise Truck Rentals",
-    "Local Trade Businesses (plumbers, HVAC, electricians, roofers)",
-    "Regional Freight Carriers & 18-Wheeler Operators",
-    "Municipal Vehicles & Government Fleets",
-    "School Buses, Shuttle Vans, Medical Transport Services"
+    { text: "Amazon DSPs & Flex Drivers", icon: Package, color: "text-orange-600", bg: "bg-orange-100" },
+    { text: "FedEx / UPS / DHL Independent Operators", icon: Package, color: "text-purple-600", bg: "bg-purple-100" }, 
+    { text: "U-Haul Locations & Franchisees", icon: Truck, color: "text-orange-500", bg: "bg-orange-50" },
+    { text: "Penske, Ryder & Enterprise Truck Rentals", icon: Truck, color: "text-yellow-600", bg: "bg-yellow-100" },
+    { text: "Local Trade Businesses (plumbers, HVAC, electricians, roofers)", icon: Wrench, color: "text-blue-600", bg: "bg-blue-100" },
+    { text: "Regional Freight Carriers & 18-Wheeler Operators", icon: Truck, color: "text-gray-600", bg: "bg-gray-100" },
+    { text: "Municipal Vehicles & Government Fleets", icon: Building, color: "text-green-600", bg: "bg-green-100" },
+    { text: "School Buses, Shuttle Vans, Medical Transport Services", icon: Bus, color: "text-red-600", bg: "bg-red-100" }
   ];
 
   const benefits = [
@@ -119,9 +123,11 @@ const FleetServices = () => {
               </h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {fleetTypes.map((type, index) => (
-                  <div key={index} className="flex items-center space-x-3 p-4 bg-muted/30 rounded-lg">
-                    <Truck className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span className="text-foreground">{type}</span>
+                  <div key={index} className="flex items-center space-x-3 p-4 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
+                    <div className={`w-10 h-10 ${type.bg} rounded-full flex items-center justify-center flex-shrink-0`}>
+                      <type.icon className={`h-5 w-5 ${type.color}`} />
+                    </div>
+                    <span className="text-foreground">{type.text}</span>
                   </div>
                 ))}
               </div>
@@ -132,7 +138,7 @@ const FleetServices = () => {
               <h3 className="text-2xl font-bold text-foreground mb-8 text-center">
                 Why Fleet Managers Choose Our Mobile Glass Service
               </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 {benefits.map((benefit, index) => (
                   <Card key={index} className="border hover:border-primary/50 transition-colors">
                     <CardHeader className="text-center pb-4">
@@ -149,6 +155,26 @@ const FleetServices = () => {
                   </Card>
                 ))}
               </div>
+              {/* Center the bottom two cards */}
+              <div className="flex justify-center mt-6">
+                <div className="grid md:grid-cols-2 gap-6 max-w-2xl">
+                  {benefits.slice(3).map((benefit, index) => (
+                    <Card key={index + 3} className="border hover:border-primary/50 transition-colors">
+                      <CardHeader className="text-center pb-4">
+                        <div className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                          <benefit.icon className="h-6 w-6 text-primary" />
+                        </div>
+                        <CardTitle className="text-lg">{benefit.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <CardDescription className="text-center">
+                          {benefit.description}
+                        </CardDescription>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Service Details */}
@@ -156,12 +182,14 @@ const FleetServices = () => {
               <h3 className="text-2xl font-bold text-foreground mb-8 text-center">
                 Service Details
               </h3>
-              <div className="bg-muted/30 rounded-2xl p-8">
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 md:p-12 max-w-4xl mx-auto border border-primary/20">
                 <div className="space-y-4">
                   {services.map((service, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground">{service}</span>
+                    <div key={index} className="flex items-start space-x-4 p-4 bg-white/50 rounded-lg">
+                      <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <CheckCircle className="h-5 w-5 text-primary" />
+                      </div>
+                      <span className="text-foreground font-medium">{service}</span>
                     </div>
                   ))}
                 </div>
