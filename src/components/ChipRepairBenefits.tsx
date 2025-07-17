@@ -76,23 +76,23 @@ const ChipRepairBenefits = () => {
             Don't let a small chip turn into a costly replacement. Our professional chip repair service 
             offers significant advantages that save you money, time, and hassle.
           </p>
-          <div className="inline-flex items-center bg-primary/10 rounded-full px-6 py-2">
-            <span className="text-primary font-semibold">⚡ Act Fast: Chips spread quickly in Nebraska weather</span>
+          <div className="inline-flex items-center bg-primary/10 rounded-full px-6 py-3 border border-primary/20">
+            <span className="text-primary font-semibold text-sm">⚡ Act Fast: Chips spread quickly in Nebraska weather</span>
           </div>
         </div>
 
         {/* Benefits Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {benefits.map((benefit, index) => (
-            <Card key={index} className="relative border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-lg group">
-              <div className="absolute -top-3 left-4 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">
+            <Card key={index} className="relative border hover:border-primary/50 transition-all duration-300 hover:shadow-xl group shadow-md">
+              <div className="absolute -top-3 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
                 {benefit.highlight}
               </div>
               <CardHeader className="text-center pb-4 pt-8">
-                <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <div className="w-14 h-14 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors shadow-sm">
                   <benefit.icon className="h-7 w-7 text-primary" />
                 </div>
-                <CardTitle className="text-lg">{benefit.title}</CardTitle>
+                <CardTitle className="text-lg font-semibold">{benefit.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center text-sm">
@@ -104,7 +104,7 @@ const ChipRepairBenefits = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="bg-muted/30 rounded-2xl p-8 md:p-12 text-center">
+        <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-8 md:p-12 text-center border border-slate-200 shadow-lg">
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
             Ready to Save Money and Time?
           </h3>
@@ -115,14 +115,14 @@ const ChipRepairBenefits = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold"
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
             >
               Get Free Quote Now
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="px-8 py-4 text-lg font-semibold"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-200"
               asChild
             >
               <a href="tel:402-555-0123" className="flex items-center space-x-2">

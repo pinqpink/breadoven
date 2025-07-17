@@ -20,14 +20,55 @@ const QuoteForm = () => {
     notes: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    
+    // Create email content
+    const emailContent = `
+New Quote Request from Omaha Auto Glass Repair Website
+
+Customer Information:
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email}
+How they found us: ${formData.foundUs}
+
+Service Details:
+Rock chip repair needed: ${formData.rockChip}
+Long crack repair needed: ${formData.longCrack}
+Previously attempted repair: ${formData.attemptedRepair}
+
+Additional Notes:
+${formData.notes}
+
+Submitted on: ${new Date().toLocaleString()}
+    `;
+
+    // Create mailto link
+    const subject = encodeURIComponent('New Quote Request - Omaha Auto Glass Repair');
+    const body = encodeURIComponent(emailContent);
+    const mailtoLink = `mailto:quotes@autoglassomaha.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Reset form
+    setFormData({
+      name: '',
+      phone: '',
+      email: '',
+      foundUs: '',
+      rockChip: '',
+      longCrack: '',
+      attemptedRepair: '',
+      notes: ''
+    });
+    
+    alert('Thank you! Your quote request has been prepared. Please send the email that just opened in your email client.');
   };
 
   return (
-    <section id="quote" className="py-20 bg-muted/50">
+    <section id="quote" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -45,7 +86,7 @@ const QuoteForm = () => {
 
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Contact Info */}
-            <Card className="lg:order-2">
+            <Card className="lg:order-2 shadow-lg">
               <CardHeader>
                 <CardTitle className="text-2xl">Contact Information</CardTitle>
                 <CardDescription>
@@ -53,8 +94,8 @@ const QuoteForm = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="flex items-center space-x-4 p-4 bg-primary/5 rounded-lg">
-                  <div className="bg-primary text-primary-foreground p-3 rounded-full">
+                <div className="flex items-center space-x-4 p-4 bg-primary/5 rounded-xl border border-primary/10">
+                  <div className="bg-primary text-primary-foreground p-3 rounded-full shadow-md">
                     <Phone className="h-5 w-5" />
                   </div>
                   <div>
@@ -68,22 +109,22 @@ const QuoteForm = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4 p-4 bg-primary/5 rounded-lg">
-                  <div className="bg-primary text-primary-foreground p-3 rounded-full">
+                <div className="flex items-center space-x-4 p-4 bg-primary/5 rounded-xl border border-primary/10">
+                  <div className="bg-primary text-primary-foreground p-3 rounded-full shadow-md">
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Email Us</h3>
                     <a 
-                      href="mailto:info@autoglassomaha.com" 
+                      href="mailto:quotes@autoglassomaha.com" 
                       className="text-primary font-semibold hover:underline"
                     >
-                      info@autoglassomaha.com
+                      quotes@autoglassomaha.com
                     </a>
                   </div>
                 </div>
 
-                <div className="mt-6 p-4 bg-accent/50 rounded-lg">
+                <div className="mt-6 p-4 bg-slate-50 rounded-xl border border-slate-200">
                   <h4 className="font-semibold text-foreground mb-2">Service Areas</h4>
                   <p className="text-muted-foreground text-sm">
                     Omaha, Bellevue, Papillion, La Vista, Gretna, Elkhorn, 
@@ -94,7 +135,7 @@ const QuoteForm = () => {
             </Card>
 
             {/* Quote Form */}
-            <Card className="lg:order-1">
+            <Card className="lg:order-1 shadow-lg">
               <CardHeader>
                 <CardTitle className="text-2xl">Request a Quote</CardTitle>
                 <CardDescription>
@@ -112,7 +153,7 @@ const QuoteForm = () => {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="mt-1"
+                        className="mt-1 rounded-lg border-gray-300 focus:border-primary focus:ring-primary"
                       />
                     </div>
                     <div>
@@ -123,7 +164,7 @@ const QuoteForm = () => {
                         required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="mt-1"
+                        className="mt-1 rounded-lg border-gray-300 focus:border-primary focus:ring-primary"
                       />
                     </div>
                   </div>
@@ -135,14 +176,14 @@ const QuoteForm = () => {
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="mt-1"
+                      className="mt-1 rounded-lg border-gray-300 focus:border-primary focus:ring-primary"
                     />
                   </div>
 
                   <div>
                     <Label htmlFor="foundUs">How did you find out about us?</Label>
                     <Select onValueChange={(value) => setFormData({ ...formData, foundUs: value })}>
-                      <SelectTrigger className="mt-1">
+                      <SelectTrigger className="mt-1 rounded-lg border-gray-300 focus:border-primary focus:ring-primary">
                         <SelectValue placeholder="Select an option" />
                       </SelectTrigger>
                       <SelectContent>
@@ -216,13 +257,13 @@ const QuoteForm = () => {
                       id="notes"
                       value={formData.notes}
                       onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                      className="mt-1"
+                      className="mt-1 rounded-lg border-gray-300 focus:border-primary focus:ring-primary"
                       rows={4}
                       placeholder="Please describe the damage or any additional information..."
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-primary hover:bg-primary-dark">
+                  <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white rounded-full py-3 font-semibold shadow-lg hover:shadow-xl transition-all duration-200">
                     Send Inquiry
                   </Button>
                 </form>
