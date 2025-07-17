@@ -13,11 +13,11 @@ const About = () => {
         {/* Background Image with Blur Effect */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/lovable-uploads/9ccc5ea8-9e5f-4dd2-a295-579bca72f167.png" 
+            src="/lovable-uploads/ChatGPT Image Jul 17, 2025, 04_03_56 PM copy.png" 
             alt="Background" 
-            className="w-full h-full object-cover opacity-10 blur-sm"
+            className="w-full h-full object-cover opacity-20 blur-sm"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 to-slate-800/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 to-slate-800/70 backdrop-blur-sm"></div>
         </div>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center relative z-10">
