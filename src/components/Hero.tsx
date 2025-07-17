@@ -14,20 +14,20 @@ const Hero = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <div className="mb-6">
-              <span className="inline-block px-4 py-2 bg-primary-light/20 text-primary-foreground rounded-full text-sm font-medium mb-4">
-                Professional Auto Glass Services in Omaha
-              </span>
+               <span className="inline-block px-4 py-2 bg-primary-light/20 text-primary-foreground rounded-full text-sm font-medium mb-4">
+                 Mobile Rock Chip Repair Specialists in Omaha
+               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-                Excellence in Auto Glass Repair in 
+                Professional Rock Chip Repair in 
                 <span className="text-primary-light"> Omaha, Nebraska</span>
               </h1>
               <h2 className="text-xl md:text-2xl text-primary-foreground/90 mb-8 font-light">
-                Honest, Quick & Precise.
+                Save Hundreds. No Deductible. Mobile Service.
               </h2>
               <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed">
-                Welcome to Omaha Auto Glass Repair – where we're not just a business; 
-                we're your go-to mobile repair team based right here in Omaha, Nebraska. 
-                We're all about fixing those pesky rock chips and long cracks with a touch of personal care.
+                Don't let a small chip become a costly windshield replacement. Our mobile rock chip 
+                repair service comes to you in Omaha, saving you money, time, and insurance hassles. 
+                Professional repairs in 15-30 minutes with no deductible!
               </p>
             </div>
 
@@ -37,7 +37,7 @@ const Hero = () => {
                 size="lg" 
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 text-lg font-semibold"
               >
-                Get an Awesome Quote or Call Us!
+                Get Free Quote - Save $300+
               </Button>
               <Button 
                 size="lg" 
@@ -73,28 +73,28 @@ const Hero = () => {
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-primary-foreground mb-4">
-                  Mobile Auto Glass Repair
+                  Mobile Rock Chip Repair
                 </h3>
                 <p className="text-primary-foreground/80 mb-6">
-                  We come to you! Professional windshield repair and replacement services 
-                  across Omaha and surrounding areas.
+                  Professional chip repair that comes to you. Save hundreds compared to replacement 
+                  and avoid insurance deductibles. Most repairs done in 15-30 minutes!
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center justify-center space-x-3 text-primary-foreground">
                     <div className="w-2 h-2 bg-primary-light rounded-full"></div>
-                    <span>Rock Chip Repair</span>
+                    <span>$0 Insurance Deductible</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3 text-primary-foreground">
                     <div className="w-2 h-2 bg-primary-light rounded-full"></div>
-                    <span>Windshield Replacement</span>
+                    <span>Same-Day Mobile Service</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3 text-primary-foreground">
                     <div className="w-2 h-2 bg-primary-light rounded-full"></div>
-                    <span>Side Window Repair</span>
+                    <span>15-30 Minute Repairs</span>
                   </div>
                   <div className="flex items-center justify-center space-x-3 text-primary-foreground">
                     <div className="w-2 h-2 bg-primary-light rounded-full"></div>
-                    <span>Back Glass Replacement</span>
+                    <span>Save $300-800+</span>
                   </div>
                 </div>
               </div>
