@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -19,9 +18,6 @@ import {
 } from 'lucide-react';
 
 const DealershipServices = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const benefits = [
     {

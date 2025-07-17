@@ -7,8 +7,23 @@ import { Badge } from '@/components/ui/badge';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
   const location = useLocation();
 
+  const handleMouseEnter = () => {
+    if (closeTimeout) {
+      clearTimeout(closeTimeout);
+      setCloseTimeout(null);
+    }
+    setIsServicesOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setIsServicesOpen(false);
+    }, 300); // 300ms delay before closing
+    setCloseTimeout(timeout);
+  };
   return (
     <header className="bg-white text-foreground sticky top-0 z-50 shadow-sm border-b border-border">
       <div className="container mx-auto px-4">
@@ -47,8 +62,8 @@ const Header = () => {
             </Link>
             <div 
               className="relative"
-              onMouseEnter={() => setIsServicesOpen(true)}
-              onMouseLeave={() => setIsServicesOpen(false)}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
               onClick={() => setIsServicesOpen(!isServicesOpen)}
             >
               <button className={`flex items-center space-x-1 text-foreground hover:text-primary transition-colors duration-200 font-medium border-b-2 border-transparent hover:border-primary pb-1 ${
@@ -58,7 +73,11 @@ const Header = () => {
                 <ChevronDown className="h-4 w-4" />
               </button>
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 bg-background border border-border shadow-lg rounded-lg p-3 min-w-[280px] z-50 pb-6">
+                <div 
+                  className="absolute top-full left-0 mt-2 bg-background border border-border shadow-lg rounded-lg p-3 min-w-[280px] z-50 pb-6"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
                   <Link 
                     to="/services" 
                     className="block p-4 rounded-md hover:bg-primary/5 transition-colors relative"

@@ -42,10 +42,11 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-white text-black bg-white hover:bg-primary hover:text-white hover:border-primary px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 relative overflow-hidden group"
+                className="border-2 border-white text-black bg-white hover:text-white hover:border-primary px-8 py-4 text-lg font-semibold rounded-full transition-all duration-500 relative overflow-hidden group"
                 asChild
               >
                 <a href="tel:402-555-0123" className="flex items-center space-x-2">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary-light to-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
                   <Phone className="h-5 w-5 relative z-10" />
                   <span className="relative z-10">Call Us Today!</span>
                 </a>

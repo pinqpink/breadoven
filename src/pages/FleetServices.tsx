@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -22,9 +21,6 @@ import {
 } from 'lucide-react';
 
 const FleetServices = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const fleetTypes = [
     { text: "Amazon DSPs & Flex Drivers", icon: Package, color: "text-orange-600", bg: "bg-orange-100" },
