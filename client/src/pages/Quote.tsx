@@ -60,8 +60,7 @@ Submitted on: ${new Date().toLocaleString()}
     alert('Thank you! Your quote request has been prepared. Please send the email that just opened in your email client.');
   };
 
-  const canSubmit = selectedOption && 
-    (selectedOption === 'large' || (selectedOption === 'small' && chipCount)) && 
+  const canSubmit = selectedOption === 'small' && chipCount && 
     customerInfo.name && 
     customerInfo.phone && 
     customerInfo.email;
@@ -114,11 +113,11 @@ Submitted on: ${new Date().toLocaleString()}
                         </div>
                         <Card className={`cursor-pointer transition-all ${selectedOption === 'large' ? 'ring-2 ring-primary border-primary' : 'border-muted'}`}>
                           <CardContent className="p-6">
-                            <div className="relative h-32 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                            <div className="relative h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                               <img 
                                 src="/broken.jpeg" 
                                 alt="Broken windshield with large damage" 
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-contain"
                               />
                             </div>
                             <h3 className="font-semibold mb-2">My damage is larger than 6 inches</h3>
@@ -140,11 +139,11 @@ Submitted on: ${new Date().toLocaleString()}
                         </div>
                         <Card className={`cursor-pointer transition-all ${selectedOption === 'small' ? 'ring-2 ring-primary border-primary' : 'border-muted'}`}>
                           <CardContent className="p-6">
-                            <div className="relative h-32 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                            <div className="relative h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                               <img 
-                                src="/crack.jpeg" 
+                                src="/newwind.png" 
                                 alt="Windshield with small chips and cracks" 
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-contain"
                               />
                             </div>
                             <h3 className="font-semibold mb-2">I have three or fewer chips/cracks smaller than 6 inches</h3>
@@ -199,12 +198,40 @@ Submitted on: ${new Date().toLocaleString()}
               </Card>
             )}
 
+            {/* Coming Soon Message for Large Damage */}
+            {selectedOption === 'large' && (
+              <Card className="mb-8 shadow-xl">
+                <CardContent className="p-8">
+                  <div className="text-center">
+                    <AlertCircle className="h-16 w-16 text-amber-500 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-amber-600 mb-4">
+                      Full Replacement Needed — Service Coming Soon
+                    </h3>
+                    <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
+                      The damage to your windshield appears to be beyond what can be safely repaired. While Omaha Auto Glass Repair currently focuses on chip and crack repairs, we're excited to share that full windshield replacement service is coming soon to our lineup of mobile offerings in the Omaha area.
+                    </p>
+                    <p className="text-lg text-muted-foreground mb-6">
+                      In the meantime, we're happy to refer you to a trusted local provider to handle the replacement. We truly appreciate your interest and hope to serve you soon with a full-service solution that's fast, local, and reliable. Here are two reliable local options:
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-4 max-w-md mx-auto">
+                      <div className="text-center p-4 bg-slate-50 rounded-lg">
+                        <h4 className="font-semibold text-primary mb-2">Metro Glass Omaha</h4>
+                      </div>
+                      <div className="text-center p-4 bg-slate-50 rounded-lg">
+                        <h4 className="font-semibold text-primary mb-2">Omaha Glass Pro</h4>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
             {/* Customer Information and Description */}
-            {(selectedOption === 'large' || (selectedOption === 'small' && chipCount)) && (
+            {(selectedOption === 'small' && chipCount) && (
               <Card className="mb-8 shadow-xl">
                 <CardHeader>
                   <CardTitle className="text-2xl">
-                    Step {selectedOption === 'large' ? '2' : '3'}: Your Information
+                    Step 3: Your Information
                   </CardTitle>
                   <CardDescription>
                     Tell us about yourself and describe the damage

@@ -154,3 +154,11 @@ The application is designed for easy deployment to platforms like Replit, Vercel
 - Updated damage option images to use actual windshield photos (broken.jpeg and crack.jpeg)
 - Redirected all "Get Free Quote" buttons throughout the site to the new quote page (/quote)
 - Updated Hero section, ChipRepairBenefits "Ready to Save Money and Time" section to redirect to quote page
+
+### Quote Page Updates (January 2025)
+- Made windshield images larger (h-40) and changed to object-contain for better visibility
+- Replaced small damage image with newwind.png showing clear windshield with small chips
+- Modified large damage section to display "coming soon" message instead of form
+- Added referral information for Metro Glass Omaha and Omaha Glass Pro
+- Updated form logic to only show customer information form for small damage repairs
+- Large damage now shows service expansion message with local provider recommendations
