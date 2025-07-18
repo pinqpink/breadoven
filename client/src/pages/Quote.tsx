@@ -115,7 +115,7 @@ Submitted on: ${new Date().toLocaleString()}
                           <CardContent className="p-6">
                             <div className="relative h-32 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                               <img 
-                                src="/broken.jpeg" 
+                                src="/newrwin.png" 
                                 alt="Broken windshield with large damage" 
                                 className="w-full h-full object-contain"
                               />
@@ -141,7 +141,7 @@ Submitted on: ${new Date().toLocaleString()}
                           <CardContent className="p-6">
                             <div className="relative h-32 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                               <img 
-                                src="/newwind_1752862458887.png" 
+                                src="/newgwin.png" 
                                 alt="Windshield with small chips and cracks" 
                                 className="w-full h-full object-contain"
                               />

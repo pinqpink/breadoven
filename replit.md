@@ -197,3 +197,14 @@ The application is designed for easy deployment to platforms like Replit, Vercel
 - ✓ Updated logo file path from old lovable-uploads to new ChatGPT Image file
 - ✓ Removed old logo file (9ccc5ea8-9e5f-4dd2-a295-579bca72f167.png) from project
 - ✓ Verified all logo references point to new logo file
+
+### Services Page Updates (January 2025)
+- ✓ Removed empty star ratings from "Trusted by Omaha drivers" section on Services page
+- ✓ Updated "Get Free Quote" button on Services page to properly route to /quote page
+- ✓ Simplified trust indicator display without rating stars
+
+### Quote Page Image Updates (January 2025)
+- ✓ Updated large damage image to use newrwin.png (windshield with large crack)
+- ✓ Updated small damage image to use newgwin.png (windshield with small chips)
+- ✓ Added new windshield damage images to public directory
+- ✓ Replaced previous placeholder images with more accurate damage representations

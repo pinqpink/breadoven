@@ -101,11 +101,8 @@ const Services = () => {
             <p className="text-xl text-primary-foreground/90 mb-8">
               Professional rock chip repair that saves you money and time
             </p>
-            <div className="flex items-center justify-center space-x-1 mb-6">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-primary-light text-primary-light" />
-              ))}
-              <span className="text-primary-foreground/80 ml-2">Trusted by Omaha drivers</span>
+            <div className="flex items-center justify-center mb-6">
+              <span className="text-primary-foreground/80">Trusted by Omaha drivers</span>
             </div>
           </div>
         </div>
@@ -197,8 +194,9 @@ const Services = () => {
             <Button 
               size="lg" 
               className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4 text-lg font-semibold"
+              asChild
             >
-              Get Free Quote
+              <a href="/quote">Get Free Quote</a>
             </Button>
             <Button 
               size="lg" 
