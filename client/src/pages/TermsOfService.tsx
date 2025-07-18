@@ -37,17 +37,7 @@ const TermsOfService = () => {
                 By using our services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mb-6">Services</h2>
-              <p className="text-muted-foreground mb-6">
-                Omaha Auto Glass Repair LLC provides mobile auto glass repair and replacement services including:
-              </p>
-              <ul className="list-disc pl-6 text-muted-foreground mb-6">
-                <li>Windshield chip repair</li>
-                <li>Windshield replacement</li>
-                <li>Side window replacement</li>
-                <li>Commercial fleet services</li>
-                <li>Dealership services</li>
-              </ul>
+
 
               <h2 className="text-2xl font-bold text-foreground mb-6">Service Agreements</h2>
               <p className="text-muted-foreground mb-6">
@@ -59,10 +49,7 @@ const TermsOfService = () => {
                 Payment is due upon completion of service unless other arrangements have been made. We accept cash, credit cards, and direct insurance billing. For commercial accounts, Net 15 or Net 30 terms may be available upon approval.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mb-6">Warranty</h2>
-              <p className="text-muted-foreground mb-6">
-                We provide a limited warranty on our workmanship and materials. Windshield chip repairs are warranted against spreading for one year from date of service. Windshield replacements are warranted for defects in installation for one year. This warranty does not cover damage from accidents, vandalism, or normal wear and tear.
-              </p>
+
 
               <h2 className="text-2xl font-bold text-foreground mb-6">Limitation of Liability</h2>
               <p className="text-muted-foreground mb-6">

@@ -105,7 +105,7 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors duration-200 font-medium border-b-2 border-transparent hover:border-primary pb-1">
+            <a href="/contact" className="text-foreground hover:text-primary transition-colors duration-200 font-medium border-b-2 border-transparent hover:border-primary pb-1">
               Contact
             </a>
           </nav>
@@ -159,7 +159,7 @@ const Header = () => {
                 Our Services
               </Link>
               <a
-                href="#contact"
+                href="/contact"
                 className="text-foreground hover:text-primary transition-colors px-2 py-2 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >

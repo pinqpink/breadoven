@@ -37,12 +37,15 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-muted/30 rounded-2xl p-8 md:p-12">
               <div className="text-center mb-12">
-                <div className="w-24 h-24 mx-auto mb-6 flex items-center justify-center">
-                  <img 
-                    src="/lovable-uploads/9ccc5ea8-9e5f-4dd2-a295-579bca72f167.png" 
-                    alt="Omaha Auto Glass Repair Logo" 
-                    className="h-20 w-auto"
-                  />
+                <div className="w-24 h-24 mx-auto mb-6 relative">
+                  <div className="absolute inset-0 bg-primary/20 rounded-full"></div>
+                  <div className="w-full h-full bg-white rounded-full flex items-center justify-center shadow-lg">
+                    <img 
+                      src="/lovable-uploads/9ccc5ea8-9e5f-4dd2-a295-579bca72f167.png" 
+                      alt="Omaha Auto Glass Repair Logo" 
+                      className="h-16 w-auto"
+                    />
+                  </div>
                 </div>
                 <h2 className="text-3xl font-bold text-foreground mb-8">
                   Our Story

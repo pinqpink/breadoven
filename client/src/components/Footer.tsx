@@ -76,16 +76,30 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Our Services</h4>
             <ul className="space-y-3">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <a 
-                    href="#services" 
-                    className="text-white/80 hover:text-primary transition-colors"
-                  >
-                    {service}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a 
+                  href="/services" 
+                  className="text-white/80 hover:text-primary transition-colors"
+                >
+                  Rock Chip Repair Service
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/dealership-services" 
+                  className="text-white/80 hover:text-primary transition-colors"
+                >
+                  Dealership Lot Services
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/fleet-services" 
+                  className="text-white/80 hover:text-primary transition-colors"
+                >
+                  Commercial Fleet Services
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -176,14 +190,15 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-2 md:mb-0">
               <Clock className="h-5 w-5" />
               <span className="font-semibold">Need Emergency Auto Glass Service?</span>
+              <span className="text-sm block">Text us for urgent service</span>
             </div>
             <Button 
               className="bg-white text-primary hover:bg-white/90 rounded-full font-semibold"
               asChild
             >
-              <a href="tel:402-302-2284" className="flex items-center space-x-2">
+              <a href="sms:402-302-2284" className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>Call (402) 302-2284 Now</span>
+                <span>Text (402) 302-2284 Now</span>
               </a>
             </Button>
           </div>

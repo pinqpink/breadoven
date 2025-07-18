@@ -32,7 +32,7 @@ Preferred communication style: Simple, everyday language.
 ## Key Components
 
 ### Frontend Components
-- **Pages**: Home (Index), About, Services, Fleet Services, Dealership Services, and 404 handling
+- **Pages**: Home (Index), About, Services, Fleet Services, Dealership Services, Contact, Privacy Policy, Terms of Service, and 404 handling
 - **Layout**: Header with navigation, Hero section, Service benefits, Quote form, and Footer
 - **UI Components**: Comprehensive set of accessible components from Shadcn/ui
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
@@ -94,3 +94,31 @@ Preferred communication style: Simple, everyday language.
 - `npm run db:push`: Push database schema changes
 
 The application is designed for easy deployment to platforms like Replit, Vercel, or traditional hosting providers, with support for both development and production environments.
+
+## Recent Changes (January 2025)
+
+### Contact Information Updates
+- Updated all phone numbers throughout the site to (402) 302-2284
+- Changed emergency service from phone calls to text messages to avoid late-night calls
+- Updated all tel: links and display text across all components
+
+### New Pages Added
+- **Contact Page**: Created comprehensive contact form with business hours, service areas, and emergency contact options
+- **Privacy Policy**: Industry-standard privacy policy with auto glass business specifics
+- **Terms of Service**: Legal terms covering services, payments, warranties, and liability (removed warranty and services sections per user request)
+
+### UI/UX Improvements
+- **About Page Logo**: Redesigned logo display with circular white background and teal/green opaque circle behind it
+- **Footer Service Links**: Updated service listings to link to respective service pages (/services, /dealership-services, /fleet-services)
+- **Services Page**: Added photo gallery section showcasing actual repair work (not logos) with before/after images
+- **Header Navigation**: Updated contact link to direct to new contact page (/contact)
+
+### Emergency Service Changes
+- Changed emergency service CTA from "Call Now" to "Text Now" 
+- Updated phone links to use sms: protocol instead of tel: for emergency contacts
+- Added explanatory text "Text us for urgent service" to emergency banner
+
+### Architecture Updates
+- All pages now use proper routing with wouter
+- Contact form uses mailto integration for message handling
+- Photo gallery integrated into services page showcasing actual repair work
