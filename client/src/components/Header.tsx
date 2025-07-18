@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
@@ -8,7 +8,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
-  const location = useLocation();
+  const [location] = useLocation();
 
   const handleMouseEnter = () => {
     if (closeTimeout) {
@@ -47,7 +47,7 @@ const Header = () => {
             <Link 
               to="/" 
               className={`text-foreground hover:text-primary transition-colors duration-200 font-medium border-b-2 border-transparent hover:border-primary pb-1 ${
-                location.pathname === '/' ? 'text-primary' : ''
+                location === '/' ? 'text-primary' : ''
               }`}
             >
               Home
@@ -55,7 +55,7 @@ const Header = () => {
             <Link 
               to="/about" 
               className={`text-foreground hover:text-primary transition-colors duration-200 font-medium border-b-2 border-transparent hover:border-primary pb-1 ${
-                location.pathname === '/about' ? 'text-primary' : ''
+                location === '/about' ? 'text-primary' : ''
               }`}
             >
               About Us
@@ -67,7 +67,7 @@ const Header = () => {
               onClick={() => setIsServicesOpen(!isServicesOpen)}
             >
               <button className={`flex items-center space-x-1 text-foreground hover:text-primary transition-colors duration-200 font-medium border-b-2 border-transparent hover:border-primary pb-1 ${
-                location.pathname === '/services' || location.pathname === '/dealership-services' || location.pathname === '/fleet-services' ? 'text-primary' : ''
+                location === '/services' || location === '/dealership-services' || location === '/fleet-services' ? 'text-primary' : ''
               }`}>
                 <span>Our Services</span>
                 <ChevronDown className="h-4 w-4" />
