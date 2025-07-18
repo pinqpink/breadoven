@@ -41,7 +41,7 @@ const About = () => {
                   <div className="absolute inset-0 bg-primary/20 rounded-full"></div>
                   <div className="w-full h-full bg-white rounded-full flex items-center justify-center shadow-lg">
                     <img 
-                      src="/lovable-uploads/9ccc5ea8-9e5f-4dd2-a295-579bca72f167.png" 
+                      src="/ChatGPT Image Jul 18, 2025, 12_42_04 PM_1752864107126.png" 
                       alt="Omaha Auto Glass Repair Logo" 
                       className="h-16 w-auto"
                     />

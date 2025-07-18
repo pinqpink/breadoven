@@ -71,7 +71,7 @@ const Hero = () => {
               <div className="text-center">
                 <div className="w-32 h-32 mx-auto mb-6 bg-white rounded-full flex items-center justify-center border-2 border-white/30 shadow-lg">
                   <img 
-                    src="/lovable-uploads/9ccc5ea8-9e5f-4dd2-a295-579bca72f167.png" 
+                    src="/ChatGPT Image Jul 18, 2025, 12_42_04 PM_1752864107126.png" 
                     alt="Omaha Auto Glass Repair" 
                     className="h-20 w-auto"
                   />

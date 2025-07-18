@@ -34,7 +34,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
               <img 
-                src="/lovable-uploads/9ccc5ea8-9e5f-4dd2-a295-579bca72f167.png" 
+                src="/ChatGPT Image Jul 18, 2025, 12_42_04 PM_1752864107126.png" 
                 alt="Omaha Auto Glass Repair" 
                 className="h-10 w-auto"
               />
