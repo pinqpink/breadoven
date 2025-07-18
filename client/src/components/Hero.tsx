@@ -36,8 +36,9 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
+                asChild
               >
-                Get Free Quote - Save $300+
+                <a href="/quote">Get Free Quote - Save $300+</a>
               </Button>
               <Button 
                 size="lg" 

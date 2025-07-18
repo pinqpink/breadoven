@@ -106,59 +106,54 @@ Submitted on: ${new Date().toLocaleString()}
                     
                     {/* Large Damage Option */}
                     <div className="relative">
-                      <div className="flex items-center space-x-2 mb-4">
-                        <RadioGroupItem value="large" id="large" />
-                        <Label htmlFor="large" className="text-lg font-semibold cursor-pointer">
-                          Large Damage
-                        </Label>
-                        <Badge variant="destructive" className="ml-2">Replacement Needed</Badge>
-                      </div>
-                      <Card className={`cursor-pointer transition-all ${selectedOption === 'large' ? 'ring-2 ring-primary border-primary' : 'border-muted'}`}>
-                        <CardContent className="p-6">
-                          <div className="relative h-32 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
-                            <div className="relative">
-                              <div className="w-20 h-12 bg-slate-300 rounded-lg flex items-center justify-center">
-                                <AlertCircle className="h-8 w-8 text-red-500" />
-                              </div>
-                              <div className="absolute top-0 left-0 w-full h-full">
-                                <div className="w-8 h-8 bg-red-500/20 rounded-full border-2 border-red-500"></div>
-                              </div>
+                      <Label htmlFor="large" className="cursor-pointer">
+                        <div className="flex items-center space-x-2 mb-4">
+                          <RadioGroupItem value="large" id="large" />
+                          <span className="text-lg font-semibold">Large Damage</span>
+                          <Badge variant="destructive" className="ml-2">Replacement Needed</Badge>
+                        </div>
+                        <Card className={`cursor-pointer transition-all ${selectedOption === 'large' ? 'ring-2 ring-primary border-primary' : 'border-muted'}`}>
+                          <CardContent className="p-6">
+                            <div className="relative h-32 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                              <img 
+                                src="/broken.jpeg" 
+                                alt="Broken windshield with large damage" 
+                                className="w-full h-full object-cover"
+                              />
                             </div>
-                          </div>
-                          <h3 className="font-semibold mb-2">My damage is larger than 6 inches</h3>
-                          <p className="text-sm text-muted-foreground">
-                            Large cracks, extensive damage, or chips larger than 6 inches typically require windshield replacement.
-                          </p>
-                        </CardContent>
-                      </Card>
+                            <h3 className="font-semibold mb-2">My damage is larger than 6 inches</h3>
+                            <p className="text-sm text-muted-foreground">
+                              Large cracks, extensive damage, or chips larger than 6 inches typically require windshield replacement.
+                            </p>
+                          </CardContent>
+                        </Card>
+                      </Label>
                     </div>
 
                     {/* Small Damage Option */}
                     <div className="relative">
-                      <div className="flex items-center space-x-2 mb-4">
-                        <RadioGroupItem value="small" id="small" />
-                        <Label htmlFor="small" className="text-lg font-semibold cursor-pointer">
-                          Small Damage
-                        </Label>
-                        <Badge variant="secondary" className="ml-2 bg-green-100 text-green-800">Repairable</Badge>
-                      </div>
-                      <Card className={`cursor-pointer transition-all ${selectedOption === 'small' ? 'ring-2 ring-primary border-primary' : 'border-muted'}`}>
-                        <CardContent className="p-6">
-                          <div className="relative h-32 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
-                            <div className="relative">
-                              <div className="w-20 h-12 bg-slate-300 rounded-lg flex items-center justify-center">
-                                <CheckCircle className="h-8 w-8 text-green-500" />
-                              </div>
-                              <div className="absolute top-2 left-2 w-2 h-2 bg-orange-500 rounded-full"></div>
-                              <div className="absolute top-6 right-3 w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
+                      <Label htmlFor="small" className="cursor-pointer">
+                        <div className="flex items-center space-x-2 mb-4">
+                          <RadioGroupItem value="small" id="small" />
+                          <span className="text-lg font-semibold">Small Damage</span>
+                          <Badge variant="secondary" className="ml-2 bg-green-100 text-green-800">Repairable</Badge>
+                        </div>
+                        <Card className={`cursor-pointer transition-all ${selectedOption === 'small' ? 'ring-2 ring-primary border-primary' : 'border-muted'}`}>
+                          <CardContent className="p-6">
+                            <div className="relative h-32 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                              <img 
+                                src="/crack.jpeg" 
+                                alt="Windshield with small chips and cracks" 
+                                className="w-full h-full object-cover"
+                              />
                             </div>
-                          </div>
-                          <h3 className="font-semibold mb-2">I have three or fewer chips/cracks smaller than 6 inches</h3>
-                          <p className="text-sm text-muted-foreground">
-                            Small chips and cracks can usually be repaired quickly and cost-effectively.
-                          </p>
-                        </CardContent>
-                      </Card>
+                            <h3 className="font-semibold mb-2">I have three or fewer chips/cracks smaller than 6 inches</h3>
+                            <p className="text-sm text-muted-foreground">
+                              Small chips and cracks can usually be repaired quickly and cost-effectively.
+                            </p>
+                          </CardContent>
+                        </Card>
+                      </Label>
                     </div>
                   </div>
                 </RadioGroup>
@@ -177,18 +172,27 @@ Submitted on: ${new Date().toLocaleString()}
                 <CardContent>
                   <RadioGroup value={chipCount} onValueChange={setChipCount}>
                     <div className="grid grid-cols-3 gap-4">
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="1" id="one" />
-                        <Label htmlFor="one" className="cursor-pointer font-medium">1 chip/crack</Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="2" id="two" />
-                        <Label htmlFor="two" className="cursor-pointer font-medium">2 chips/cracks</Label>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <RadioGroupItem value="3" id="three" />
-                        <Label htmlFor="three" className="cursor-pointer font-medium">3 chips/cracks</Label>
-                      </div>
+                      <Label htmlFor="one" className="cursor-pointer">
+                        <Card className={`p-6 text-center transition-all ${chipCount === '1' ? 'ring-2 ring-primary border-primary bg-primary/5' : 'border-muted hover:border-primary/50'}`}>
+                          <RadioGroupItem value="1" id="one" className="mb-2" />
+                          <div className="text-2xl font-bold text-primary">1</div>
+                          <div className="text-sm text-muted-foreground">chip/crack</div>
+                        </Card>
+                      </Label>
+                      <Label htmlFor="two" className="cursor-pointer">
+                        <Card className={`p-6 text-center transition-all ${chipCount === '2' ? 'ring-2 ring-primary border-primary bg-primary/5' : 'border-muted hover:border-primary/50'}`}>
+                          <RadioGroupItem value="2" id="two" className="mb-2" />
+                          <div className="text-2xl font-bold text-primary">2</div>
+                          <div className="text-sm text-muted-foreground">chips/cracks</div>
+                        </Card>
+                      </Label>
+                      <Label htmlFor="three" className="cursor-pointer">
+                        <Card className={`p-6 text-center transition-all ${chipCount === '3' ? 'ring-2 ring-primary border-primary bg-primary/5' : 'border-muted hover:border-primary/50'}`}>
+                          <RadioGroupItem value="3" id="three" className="mb-2" />
+                          <div className="text-2xl font-bold text-primary">3</div>
+                          <div className="text-sm text-muted-foreground">chips/cracks</div>
+                        </Card>
+                      </Label>
                     </div>
                   </RadioGroup>
                 </CardContent>

@@ -147,3 +147,10 @@ The application is designed for easy deployment to platforms like Replit, Vercel
 - Quote submissions sent to info@autoglassomaha.com via mailto integration
 - Visual windshield damage illustrations for each option
 - Proper form validation and user feedback
+
+### Quote Page UI Improvements (Latest)
+- Made entire damage selection diagrams clickable, not just radio buttons
+- Changed chip count selection to card-based boxes labeled 1, 2, and 3
+- Updated damage option images to use actual windshield photos (broken.jpeg and crack.jpeg)
+- Redirected all "Get Free Quote" buttons throughout the site to the new quote page (/quote)
+- Updated Hero section, ChipRepairBenefits "Ready to Save Money and Time" section to redirect to quote page
