@@ -122,3 +122,28 @@ The application is designed for easy deployment to platforms like Replit, Vercel
 - All pages now use proper routing with wouter
 - Contact form uses mailto integration for message handling
 - Photo gallery integrated into services page showcasing actual repair work
+
+## Recent Changes (January 2025) - Updated
+
+### Contact Page Updates
+- Added Google Maps embed showing Omaha service area
+- Removed "Get a Free Quote" section from contact page
+- Changed emergency service back to phone calls instead of text messages
+
+### Header Navigation Changes
+- Updated phone number in toolbar to use SMS/text messaging (sms: protocol)
+- Made "Get Quote" button redirect to new dedicated quote page (/quote)
+
+### Services Page Updates
+- Removed before/after photo gallery section from Services page
+- Kept process and benefits sections intact
+
+### New Quote Page
+- Created comprehensive quote page with 2 main damage options:
+  1. Large damage (larger than 6 inches) - leads to replacement
+  2. Small damage (3 or fewer chips/cracks smaller than 6 inches) - repairable
+- Dynamic form that shows chip count selection (1, 2, or 3) when small damage is selected
+- Customer information form with name, phone, email, and damage description
+- Quote submissions sent to info@autoglassomaha.com via mailto integration
+- Visual windshield damage illustrations for each option
+- Proper form validation and user feedback

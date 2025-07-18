@@ -113,14 +113,14 @@ const Header = () => {
           {/* Phone Number & CTA */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
-              href="tel:402-302-2284"
+              href="sms:402-302-2284"
               className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors font-medium"
             >
               <Phone className="h-4 w-4" />
               <span className="font-semibold">(402) 302-2284</span>
             </a>
-            <Button variant="default" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-full font-medium">
-              Get Quote
+            <Button variant="default" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-full font-medium" asChild>
+              <a href="/quote">Get Quote</a>
             </Button>
           </div>
 
@@ -173,8 +173,8 @@ const Header = () => {
                   <Phone className="h-4 w-4" />
                   <span className="font-semibold">(402) 302-2284</span>
                 </a>
-                <Button variant="default" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mx-2 rounded-full font-medium">
-                  Get Quote
+                <Button variant="default" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mx-2 rounded-full font-medium" asChild>
+                  <a href="/quote">Get Quote</a>
                 </Button>
               </div>
             </nav>

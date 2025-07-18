@@ -144,62 +144,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Work Gallery Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              See Our Professional Work
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Real before and after photos of our windshield chip repair work in Omaha. 
-              Professional results that restore your windshield's strength and clarity.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <Card className="overflow-hidden shadow-lg">
-              <div className="relative h-64">
-                <img 
-                  src="/lovable-uploads/ChatGPT Image Jul 17, 2025, 04_03_56 PM.png" 
-                  alt="Before and after windshield chip repair showing professional results" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  Before & After
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Star Break Repair</h3>
-                <p className="text-muted-foreground">
-                  Complex star break successfully repaired with our resin injection process. 
-                  The chip is now nearly invisible and structurally sound.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="overflow-hidden shadow-lg">
-              <div className="relative h-64">
-                <img 
-                  src="/lovable-uploads/ChatGPT Image Jul 17, 2025, 04_03_56 PM copy.png" 
-                  alt="Professional windshield chip repair work in progress" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  Professional Work
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Bullseye Chip Repair</h3>
-                <p className="text-muted-foreground">
-                  Our technician working on a bullseye chip repair. Using specialized tools 
-                  and techniques to ensure a perfect restoration.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Process Section */}
       <section className="py-20 bg-background">

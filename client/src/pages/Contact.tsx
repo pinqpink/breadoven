@@ -69,30 +69,11 @@ Submitted on: ${new Date().toLocaleString()}
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             
-            {/* Quick Quote CTA */}
+            {/* Page Header */}
             <div className="text-center mb-16">
-              <div className="bg-primary/10 rounded-2xl p-8 border border-primary/20 mb-8">
-                <h2 className="text-2xl font-bold text-foreground mb-4">
-                  Need a Quick Quote for Your Windshield?
-                </h2>
-                <p className="text-muted-foreground mb-6">
-                  Get an instant estimate for your windshield repair or replacement
-                </p>
-                <Button 
-                  size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4"
-                  asChild
-                >
-                  <a href="/#quote">Get Free Quote</a>
-                </Button>
-              </div>
-              
-              <div className="text-center">
-                <h3 className="text-xl font-semibold text-foreground mb-4">OR</h3>
-                <h2 className="text-3xl font-bold text-foreground mb-8">
-                  Send Us A Personal Message
-                </h2>
-              </div>
+              <h2 className="text-3xl font-bold text-foreground mb-8">
+                Send Us A Personal Message
+              </h2>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
@@ -255,17 +236,41 @@ Submitted on: ${new Date().toLocaleString()}
                         Emergency Service Available
                       </h3>
                       <p className="text-muted-foreground mb-4 text-sm">
-                        For urgent windshield repairs, text us anytime
+                        For urgent windshield repairs, call us anytime
                       </p>
                       <Button 
                         className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3"
                         asChild
                       >
-                        <a href="sms:402-302-2284" className="flex items-center space-x-2">
+                        <a href="tel:402-302-2284" className="flex items-center space-x-2">
                           <Phone className="h-4 w-4" />
-                          <span>Text (402) 302-2284</span>
+                          <span>Call (402) 302-2284</span>
                         </a>
                       </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Google Maps */}
+                <Card className="shadow-xl mt-8">
+                  <CardHeader>
+                    <CardTitle className="text-xl">Our Service Area</CardTitle>
+                    <CardDescription>
+                      We serve Omaha and surrounding areas
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-0">
+                    <div className="w-full h-64 rounded-b-lg overflow-hidden">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194473.04670850273!2d-96.2094825!3d41.2524269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87938dc8b50cfced%3A0x46424d4fae37b604!2sOmaha%2C%20NE!5e0!3m2!1sen!2sus!4v1734567890123!5m2!1sen!2sus"
+                        width="100%"
+                        height="256"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Omaha Service Area Map"
+                      />
                     </div>
                   </CardContent>
                 </Card>
