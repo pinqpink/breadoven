@@ -208,3 +208,14 @@ The application is designed for easy deployment to platforms like Replit, Vercel
 - ✓ Updated small damage image to use newgwin.png (windshield with small chips)
 - ✓ Added new windshield damage images to public directory
 - ✓ Replaced previous placeholder images with more accurate damage representations
+- ✓ Zoomed in windshield images (scale-150 with object-cover) for better visibility of damage
+
+### Fleet Services Page Updates (January 2025)
+- ✓ Centered the three remaining sales point boxes in single row layout
+- ✓ Removed duplicate "Consolidated Invoicing" and "Maintenance Tracking" boxes
+- ✓ Simplified benefits section to three main value propositions
+
+### Business Hours Removal (January 2025)
+- ✓ Removed business hours section from Footer
+- ✓ Removed business hours section from Contact page
+- ✓ Changed "24/7 Emergency Service" to "Flexible Emergency Service" in Footer

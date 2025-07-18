@@ -67,7 +67,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="h-5 w-5 text-primary" />
-                <span>24/7 Emergency Service</span>
+                <span>Flexible Emergency Service</span>
               </div>
             </div>
           </div>
@@ -139,27 +139,7 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Business Hours */}
-            <div className="mb-6">
-              <h5 className="font-semibold mb-3">Business Hours</h5>
-              <div className="space-y-2 text-sm text-white/80">
-                <div className="flex justify-between">
-                  <span>Monday - Friday:</span>
-                  <span>7AM - 7PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Saturday:</span>
-                  <span>8AM - 5PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sunday:</span>
-                  <span>9AM - 4PM</span>
-                </div>
-                <div className="text-primary font-medium">
-                  Emergency Service: 24/7
-                </div>
-              </div>
-            </div>
+
 
             {/* Social Media */}
             <div>

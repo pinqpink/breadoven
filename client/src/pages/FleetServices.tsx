@@ -48,16 +48,6 @@ const FleetServices = () => {
       icon: Calendar,
       title: "Convenient 24/7 Scheduling",
       description: "We work around your hours to service fleets day or night."
-    },
-    {
-      icon: FileText,
-      title: "Consolidated Invoicing",
-      description: "No need to track multiple service calls — one invoice per visit."
-    },
-    {
-      icon: Users,
-      title: "Maintenance Tracking",
-      description: "Each windshield repair is logged by vehicle ID for your internal records."
     }
   ];
 
@@ -143,28 +133,10 @@ const FleetServices = () => {
               <h3 className="text-2xl font-bold text-foreground mb-8 text-center">
                 Why Fleet Managers Choose Our Mobile Glass Service
               </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                {benefits.map((benefit, index) => (
-                  <Card key={index} className="border hover:border-primary/50 transition-colors">
-                    <CardHeader className="text-center pb-4">
-                      <div className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                        <benefit.icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <CardTitle className="text-lg">{benefit.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-center">
-                        {benefit.description}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-              {/* Center the bottom two cards */}
-              <div className="flex justify-center mt-6">
-                <div className="grid md:grid-cols-2 gap-6 max-w-2xl">
-                  {benefits.slice(3).map((benefit, index) => (
-                    <Card key={index + 3} className="border hover:border-primary/50 transition-colors">
+              <div className="flex justify-center">
+                <div className="grid md:grid-cols-3 gap-6 max-w-4xl">
+                  {benefits.map((benefit, index) => (
+                    <Card key={index} className="border hover:border-primary/50 transition-colors">
                       <CardHeader className="text-center pb-4">
                         <div className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
                           <benefit.icon className="h-6 w-6 text-primary" />
