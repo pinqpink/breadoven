@@ -125,7 +125,7 @@ const ChipRepairBenefits = () => {
               className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-200"
               asChild
             >
-              <a href="tel:402-555-0123" className="flex items-center space-x-2">
+              <a href="tel:402-302-2284" className="flex items-center space-x-2">
                 <Phone className="h-5 w-5" />
                 <span>Call for Same-Day Service</span>
               </a>

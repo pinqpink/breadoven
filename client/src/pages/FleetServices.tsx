@@ -228,9 +228,9 @@ const FleetServices = () => {
                   className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-4"
                   asChild
                 >
-                  <a href="tel:402-555-0123" className="flex items-center space-x-2">
+                  <a href="tel:402-302-2284" className="flex items-center space-x-2">
                     <Phone className="h-5 w-5" />
-                    <span>Call (402) 555-0123</span>
+                    <span>Call (402) 302-2284</span>
                   </a>
                 </Button>
                 <Button 

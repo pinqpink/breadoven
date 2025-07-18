@@ -113,11 +113,11 @@ const Header = () => {
           {/* Phone Number & CTA */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
-              href="tel:402-555-0123"
+              href="tel:402-302-2284"
               className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors font-medium"
             >
               <Phone className="h-4 w-4" />
-              <span className="font-semibold">402-555-0123</span>
+              <span className="font-semibold">(402) 302-2284</span>
             </a>
             <Button variant="default" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded-full font-medium">
               Get Quote
@@ -167,11 +167,11 @@ const Header = () => {
               </a>
               <div className="pt-4 border-t border-border">
                 <a
-                  href="tel:402-555-0123"
+                  href="tel:402-302-2284"
                   className="flex items-center space-x-2 text-foreground hover:text-primary mb-3 px-2 font-medium"
                 >
                   <Phone className="h-4 w-4" />
-                  <span className="font-semibold">402-555-0123</span>
+                  <span className="font-semibold">(402) 302-2284</span>
                 </a>
                 <Button variant="default" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mx-2 rounded-full font-medium">
                   Get Quote

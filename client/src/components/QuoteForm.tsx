@@ -77,8 +77,8 @@ Submitted on: ${new Date().toLocaleString()}
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
               Call us today at{' '}
-              <a href="tel:402-555-0123" className="text-primary font-semibold hover:underline">
-                402-555-0123
+              <a href="tel:402-302-2284" className="text-primary font-semibold hover:underline">
+                (402) 302-2284
               </a>{' '}
               or fill out the form for a quick and seamless estimate & opinion.
             </p>
@@ -101,10 +101,10 @@ Submitted on: ${new Date().toLocaleString()}
                   <div>
                     <h3 className="font-semibold text-foreground">Call Us Now</h3>
                     <a 
-                      href="tel:402-555-0123" 
+                      href="tel:402-302-2284" 
                       className="text-primary font-semibold text-lg hover:underline"
                     >
-                      402-555-0123
+                      (402) 302-2284
                     </a>
                   </div>
                 </div>

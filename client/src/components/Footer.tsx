@@ -20,12 +20,9 @@ const Footer = () => {
   ];
 
   const services = [
-    'Windshield Replacement',
-    'Rock Chip Repair', 
-    'Crack Repair',
-    'Side Window Replacement',
-    'Back Glass Replacement',
-    'Emergency Service'
+    'Rock Chip Repair Service',
+    'Dealership Lot Services', 
+    'Commercial Fleet Services'
   ];
 
   return (
@@ -54,8 +51,8 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary" />
-                <a href="tel:402-555-0123" className="hover:text-primary transition-colors">
-                  402-555-0123
+                <a href="tel:402-302-2284" className="hover:text-primary transition-colors">
+                  (402) 302-2284
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -184,9 +181,9 @@ const Footer = () => {
               className="bg-white text-primary hover:bg-white/90 rounded-full font-semibold"
               asChild
             >
-              <a href="tel:402-555-0123" className="flex items-center space-x-2">
+              <a href="tel:402-302-2284" className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>Call 402-555-0123 Now</span>
+                <span>Call (402) 302-2284 Now</span>
               </a>
             </Button>
           </div>
@@ -214,10 +211,10 @@ const Footer = () => {
           </div>
 
           <div className="flex space-x-6 text-sm">
-            <a href="#" className="text-white/80 hover:text-primary transition-colors">
+            <a href="/privacy-policy" className="text-white/80 hover:text-primary transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-white/80 hover:text-primary transition-colors">
+            <a href="/terms-of-service" className="text-white/80 hover:text-primary transition-colors">
               Terms of Service
             </a>
           </div>

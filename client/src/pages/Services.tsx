@@ -204,7 +204,7 @@ const Services = () => {
               className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 text-lg font-semibold"
               asChild
             >
-              <a href="tel:402-555-0123" className="flex items-center space-x-2">
+              <a href="tel:402-302-2284" className="flex items-center space-x-2">
                 <Phone className="h-5 w-5" />
                 <span>Call Now</span>
               </a>

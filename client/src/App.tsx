@@ -9,6 +9,8 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import FleetServices from "./pages/FleetServices";
 import DealershipServices from "./pages/DealershipServices";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,6 +37,8 @@ const App = () => (
         <Route path="/services" component={Services} />
         <Route path="/fleet-services" component={FleetServices} />
         <Route path="/dealership-services" component={DealershipServices} />
+        <Route path="/privacy-policy" component={PrivacyPolicy} />
+        <Route path="/terms-of-service" component={TermsOfService} />
         {/* Catch-all route */}
         <Route component={NotFound} />
       </Router>

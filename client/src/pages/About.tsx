@@ -37,10 +37,12 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-muted/30 rounded-2xl p-8 md:p-12">
               <div className="text-center mb-12">
-                <div className="w-24 h-24 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
-                    <span className="text-primary-foreground text-xl font-bold">OAG</span>
-                  </div>
+                <div className="w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/9ccc5ea8-9e5f-4dd2-a295-579bca72f167.png" 
+                    alt="Omaha Auto Glass Repair Logo" 
+                    className="h-20 w-auto"
+                  />
                 </div>
                 <h2 className="text-3xl font-bold text-foreground mb-8">
                   Our Story
@@ -63,7 +65,7 @@ const About = () => {
                     className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4"
                     asChild
                   >
-                    <a href="tel:402-555-0123" className="flex items-center space-x-2">
+                    <a href="tel:402-302-2284" className="flex items-center space-x-2">
                       <Phone className="h-5 w-5" />
                       <span>Call Us Today</span>
                     </a>
