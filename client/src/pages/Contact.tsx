@@ -206,7 +206,7 @@ Submitted on: ${new Date().toLocaleString()}
                       <div>
                         <h3 className="font-semibold text-foreground">Service Area</h3>
                         <p className="text-muted-foreground">
-                          Omaha, Bellevue, Papillion, La Vista, Gretna, Elkhorn, and surrounding areas
+                          Omaha, Bellevue, Papillion, La Vista, Gretna, Elkhorn, Bennington, and surrounding areas
                         </p>
                       </div>
                     </div>
@@ -233,7 +233,7 @@ Submitted on: ${new Date().toLocaleString()}
                   <CardContent className="p-6">
                     <div className="text-center">
                       <h3 className="text-lg font-semibold text-foreground mb-2">
-                        Emergency Service Available
+                        Call Us for Urgent Service
                       </h3>
                       <p className="text-muted-foreground mb-4 text-sm">
                         For urgent windshield repairs, call us anytime
@@ -262,7 +262,7 @@ Submitted on: ${new Date().toLocaleString()}
                   <CardContent className="p-0">
                     <div className="w-full h-64 rounded-b-lg overflow-hidden">
                       <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194473.04670850273!2d-96.2094825!3d41.2524269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87938dc8b50cfced%3A0x46424d4fae37b604!2sOmaha%2C%20NE!5e0!3m2!1sen!2sus!4v1734567890123!5m2!1sen!2sus"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250000!2d-96.1!3d41.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m4!1s0x87938dc8b50cfced%3A0x46424d4fae37b604!3m2!1d41.2524269!2d-96.0094825!5e0!3m2!1sen!2sus!4v1734567890123!5m2!1sen!2sus"
                         width="100%"
                         height="256"
                         style={{ border: 0 }}

@@ -16,7 +16,7 @@ const Footer = () => {
 
   const serviceAreas = [
     'Omaha', 'Bellevue', 'Papillion', 'La Vista', 'Gretna',
-    'Elkhorn', 'Millard', 'Ralston', 'Chalco', 'Boys Town'
+    'Elkhorn', 'Millard', 'Ralston', 'Chalco', 'Bennington'
   ];
 
   const services = [
@@ -189,16 +189,16 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-3 mb-2 md:mb-0">
               <Clock className="h-5 w-5" />
-              <span className="font-semibold">Need Emergency Auto Glass Service?</span>
-              <span className="text-sm block">Text us for urgent service</span>
+              <span className="font-semibold">Call Us for Urgent Service</span>
+              <span className="text-sm block">Call us for urgent service</span>
             </div>
             <Button 
               className="bg-white text-primary hover:bg-white/90 rounded-full font-semibold"
               asChild
             >
-              <a href="sms:402-302-2284" className="flex items-center space-x-2">
+              <a href="tel:402-302-2284" className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>Text (402) 302-2284 Now</span>
+                <span>Call (402) 302-2284 Now</span>
               </a>
             </Button>
           </div>

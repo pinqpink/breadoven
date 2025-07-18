@@ -113,7 +113,7 @@ Submitted on: ${new Date().toLocaleString()}
                         </div>
                         <Card className={`cursor-pointer transition-all ${selectedOption === 'large' ? 'ring-2 ring-primary border-primary' : 'border-muted'}`}>
                           <CardContent className="p-6">
-                            <div className="relative h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                            <div className="relative h-32 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                               <img 
                                 src="/broken.jpeg" 
                                 alt="Broken windshield with large damage" 
@@ -139,9 +139,9 @@ Submitted on: ${new Date().toLocaleString()}
                         </div>
                         <Card className={`cursor-pointer transition-all ${selectedOption === 'small' ? 'ring-2 ring-primary border-primary' : 'border-muted'}`}>
                           <CardContent className="p-6">
-                            <div className="relative h-40 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                            <div className="relative h-32 bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                               <img 
-                                src="/newwind.png" 
+                                src="/newwind_1752862458887.png" 
                                 alt="Windshield with small chips and cracks" 
                                 className="w-full h-full object-contain"
                               />
